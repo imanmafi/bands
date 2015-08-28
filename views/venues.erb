@@ -1,0 +1,10 @@
+<h1><a href="/">Band Tracker</a></h1>
+<form action="/venues" method="post">
+  <input id="name" name="name" type="text">
+  <button type="submit" class="btn btn-success">Add venue</button>
+</form>
+<h4>
+  <% @venues.order("name ASC").each do |venue| %>
+    <a href="/venues/<%= venue.id %>"><%= venue.name %><br></a>
+  <% end %> 
+</h4>

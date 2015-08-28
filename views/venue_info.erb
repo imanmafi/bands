@@ -1,0 +1,8 @@
+<h1><a href="/">Band Tracker</a></h1>
+<h3><%= @venue.name %></h3>
+<form action="/venues/<%= @venue.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" class="btn btn-danger">Delete venue</button>
+</form>
+<br>
+<a href="/venues/<%= @venue.id %>/edit"><button type="submit" class="btn btn-info">Edit venue</button></a>
